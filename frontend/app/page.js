@@ -136,7 +136,7 @@ export default function Home() {
         <header className="space-y-2">
           <p className="text-xs font-medium tracking-[0.22em] text-zinc-500 uppercase">Smart Study Scanner</p>
           <h1 className="text-3xl font-bold tracking-[-0.02em] bg-gradient-to-br from-white to-zinc-500 bg-clip-text text-transparent">
-            Zen Minimal Workspace
+            Zen Study AI
           </h1>
           <p className="text-zinc-400 max-w-2xl leading-7">
           Upload one or more study snapshots and get clean text plus concise bullets. Then choose how many

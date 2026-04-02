@@ -145,15 +145,15 @@ export default function Dashboard({
               />
             </div>
           ) : null}
-          <div className="flex items-center gap-3">
-            <label htmlFor="mcq-count" className="text-sm text-zinc-400 whitespace-nowrap">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <label htmlFor="mcq-count" className="text-sm text-zinc-400 sm:whitespace-nowrap">
               How many questions?
             </label>
             <select
               id="mcq-count"
               value={mcqCount}
               onChange={(event) => onMcqCountChange(Number(event.target.value))}
-              className="h-10 min-w-24 rounded-lg border border-white/10 bg-transparent px-3 text-sm text-zinc-100 focus:border-zinc-500 focus:outline-none"
+              className="h-10 w-full rounded-lg border border-white/10 bg-transparent px-3 text-sm text-zinc-100 focus:border-zinc-500 focus:outline-none sm:w-auto sm:min-w-24"
             >
               {Array.from({ length: 20 }, (_, index) => index + 1).map((count) => (
                 <option key={count} value={count} className="bg-white text-black">
@@ -165,7 +165,7 @@ export default function Dashboard({
               type="button"
               onClick={onGenerateMcq}
               disabled={mcqLoading || !original_text}
-              className="ml-auto inline-flex h-10 items-center gap-2 rounded-lg bg-white px-4 text-sm font-medium text-black hover:bg-zinc-200 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-white px-4 text-sm font-medium text-black hover:bg-zinc-200 disabled:opacity-60 disabled:cursor-not-allowed sm:ml-auto sm:w-auto"
             >
               <Sparkles className="h-4 w-4" />
               {mcqLoading ? "Generating..." : "Generate"}
